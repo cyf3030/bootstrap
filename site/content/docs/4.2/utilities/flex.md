@@ -24,7 +24,8 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
 - `.d{{ .abbr }}-flex`
-- `.d{{ .abbr }}-inline-flex`{{ end -}}
+- `.d{{ .abbr }}-inline-flex`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -70,7 +71,8 @@ Responsive variations also exist for `flex-direction`.
 - `.flex{{ .abbr }}-row`
 - `.flex{{ .abbr }}-row-reverse`
 - `.flex{{ .abbr }}-column`
-- `.flex{{ .abbr }}-column-reverse`{{ end -}}
+- `.flex{{ .abbr }}-column-reverse`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -123,7 +125,8 @@ Responsive variations also exist for `justify-content`.
 - `.justify-content{{ .abbr }}-end`
 - `.justify-content{{ .abbr }}-center`
 - `.justify-content{{ .abbr }}-between`
-- `.justify-content{{ .abbr }}-around`{{ end -}}
+- `.justify-content{{ .abbr }}-around`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -176,7 +179,8 @@ Responsive variations also exist for `align-items`.
 - `.align-items{{ .abbr }}-end`
 - `.align-items{{ .abbr }}-center`
 - `.align-items{{ .abbr }}-baseline`
-- `.align-items{{ .abbr }}-stretch`{{ end -}}
+- `.align-items{{ .abbr }}-stretch`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -229,7 +233,8 @@ Responsive variations also exist for `align-self`.
 - `.align-self{{ .abbr }}-end`
 - `.align-self{{ .abbr }}-center`
 - `.align-self{{ .abbr }}-baseline`
-- `.align-self{{ .abbr }}-stretch`{{ end -}}
+- `.align-self{{ .abbr }}-stretch`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -250,7 +255,8 @@ Responsive variations also exist for `flex-fill`.
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
-- `.flex{{ .abbr }}-fill`{{ end -}}
+- `.flex{{ .abbr }}-fill`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -281,7 +287,8 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
 - `.flex{{ .abbr }}-{grow|shrink}-0`
-- `.flex{{ .abbr }}-{grow|shrink}-1`{{ end -}}
+- `.flex{{ .abbr }}-{grow|shrink}-1`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -409,7 +416,8 @@ Responsive variations also exist for `flex-wrap`.
 {{- range $.Site.Data.breakpoints }}
 - `.flex{{ .abbr }}-nowrap`
 - `.flex{{ .abbr }}-wrap`
-- `.flex{{ .abbr }}-wrap-reverse`{{ end -}}
+- `.flex{{ .abbr }}-wrap-reverse`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -431,7 +439,9 @@ Responsive variations also exist for `order`.
 {{< flex.inline >}}
 {{- range $i, $bp := $.Site.Data.breakpoints -}}
 {{- range $j, $num := seq 0 12 }}
-- `.order{{ $bp.abbr }}-{{ $j }}`{{ end }}{{- end -}}
+- `.order{{ $bp.abbr }}-{{ $j }}`
+{{- end -}}
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}
 
@@ -596,6 +606,7 @@ Responsive variations also exist for `align-content`.
 - `.align-content{{ .abbr }}-end`
 - `.align-content{{ .abbr }}-center`
 - `.align-content{{ .abbr }}-around`
-- `.align-content{{ .abbr }}-stretch`{{ end -}}
+- `.align-content{{ .abbr }}-stretch`
+{{- end -}}
 {{< /flex.inline >}}
 {{< /markdown >}}

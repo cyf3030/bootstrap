@@ -31,7 +31,8 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-border text-{{ .name }}" role="status">
   <span class="sr-only">Loading...</span>
-</div>{{ end }}
+</div>
+{{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 
@@ -56,7 +57,8 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-grow text-{{ .name }}" role="status">
   <span class="sr-only">Loading...</span>
-</div>{{ end }}
+</div>
+{{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 

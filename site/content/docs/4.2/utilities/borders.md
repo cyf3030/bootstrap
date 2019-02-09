@@ -43,7 +43,9 @@ Change the border color using utilities built on our theme colors.
 {{< example >}}
 {{< border.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<span class="border border-{{ .name }}"></span>{{ end }}{{< /border.inline >}}
+<span class="border border-{{ .name }}"></span>
+{{- end -}}
+{{< /border.inline >}}
 <span class="border border-white"></span>
 {{< /example >}}
 </div>

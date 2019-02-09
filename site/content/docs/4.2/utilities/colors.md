@@ -11,7 +11,9 @@ toc: true
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<p class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">.text-{{ .name }}</p>{{ end }}{{< /colors.inline >}}
+<p class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">.text-{{ .name }}</p>
+{{- end -}}
+{{< /colors.inline >}}
 <p class="text-body">.text-body</p>
 <p class="text-muted">.text-muted</p>
 <p class="text-white bg-dark">.text-white</p>
@@ -24,7 +26,9 @@ Contextual text classes also work well on anchors with the provided hover and fo
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<p><a href="#" class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">{{ .name | title }} link</a></p>{{ end }}{{< /colors.inline >}}
+<p><a href="#" class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">{{ .name | title }} link</a></p>
+{{- end -}}
+{{< /colors.inline >}}
 <p><a href="#" class="text-muted">Muted link</a></p>
 <p><a href="#" class="text-white bg-dark">White link</a></p>
 {{< /example >}}
@@ -36,7 +40,9 @@ Similar to the contextual text color classes, easily set the background of an el
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="p-3 mb-2 bg-{{ .name }} {{ if or (eq .name "light") (eq .name "warning") }}text-dark{{ else }}text-white{{ end }}">.bg-{{ .name }}</div>{{ end }}{{< /colors.inline >}}
+<div class="p-3 mb-2 bg-{{ .name }} {{ if or (eq .name "light") (eq .name "warning") }}text-dark{{ else }}text-white{{ end }}">.bg-{{ .name }}</div>
+{{- end -}}
+{{< /colors.inline >}}
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
 {{< /example >}}
@@ -48,7 +54,8 @@ When `$enable-gradients` is set to `true` (default is `false`), you can use `.bg
 {{< markdown >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-- `.bg-gradient-{{ .name }}`{{ end -}}
+- `.bg-gradient-{{ .name }}`
+{{- end -}}
 {{< /colors.inline >}}
 {{< /markdown >}}
 

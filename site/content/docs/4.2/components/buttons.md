@@ -13,7 +13,9 @@ Bootstrap includes several predefined button styles, each serving its own semant
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>{{ end }}{{< /buttons.inline >}}
+<button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
 
 <button type="button" class="btn btn-link">Link</button>
 {{< /example >}}
@@ -43,7 +45,9 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>{{ end }}{{< /buttons.inline >}}
+<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
 {{< /example >}}
 
 ## Sizes

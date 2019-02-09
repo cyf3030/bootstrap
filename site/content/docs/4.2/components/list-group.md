@@ -107,7 +107,8 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
   <li class="list-group-item">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>
-</ul>{{ end -}}
+</ul>
+{{- end -}}
 {{< /list-group.inline >}}
 {{< /example >}}
 
@@ -118,10 +119,11 @@ Use contextual classes to style list items with a stateful background and color.
 {{< example >}}
 <ul class="list-group">
   <li class="list-group-item">Dapibus ac facilisis in</li>
-
-  {{< list.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-  <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>{{ end }}{{< /list.inline >}}
+{{< list.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+  <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
+{{- end -}}
+{{< /list.inline >}}
 </ul>
 {{< /example >}}
 
@@ -130,10 +132,11 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {{< example >}}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-
-  {{< list.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>{{ end }}{{< /list.inline >}}
+{{< list.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
+{{- end -}}
+{{< /list.inline >}}
 </div>
 {{< /example >}}
 

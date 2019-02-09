@@ -523,7 +523,9 @@ Use contextual classes to color table rows or individual cells.
         <th scope="row">{{ .name | title }}</th>
         <td>Cell</td>
         <td>Cell</td>
-      </tr>{{ end }}{{< /table.inline >}}
+      </tr>
+      {{- end -}}
+      {{< /table.inline >}}
     </tbody>
   </table>
 </div>
@@ -533,14 +535,18 @@ Use contextual classes to color table rows or individual cells.
 <tr class="table-active">...</tr>
 {{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<tr class="table-{{ .name }}">...</tr>{{ end }}{{< /table.inline >}}
+<tr class="table-{{ .name }}">...</tr>
+{{- end -}}
+{{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
 <tr>
   <td class="table-active">...</td>
-  {{< table.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-  <td class="table-{{ .name }}">...</td>{{ end }}{{< /table.inline >}}
+{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+  <td class="table-{{ .name }}">...</td>
+{{- end -}}
+{{< /table.inline >}}
 </tr>
 {{< /highlight >}}
 
