@@ -20,8 +20,8 @@
 {{- $height := .Get "height" | default "180" -}}
 {{- $text := .Get "text" | default (printf "%sx%s" $width $height) -}}
 
-{{- $hasTitle := not (eq $title " ") -}}
-{{- $hasText := not (eq $text " ") -}}
+{{- $hasTitle := not (eq $title "false") -}}
+{{- $hasText := not (eq $text "false") -}}
 
 <svg class="bd-placeholder-img{{ with $class }} {{ . }}{{ end }}" width="{{ $width }}" height="{{ $height }}" xmlns="http://www.w3.org/2000/svg"{{ if (or $hasTitle $hasText) }} aria-label="{{ if $hasTitle }}{{ $title }}{{ if $hasText }}: {{ end }}{{ end }}{{ if ($hasText) }}{{ $text }}{{ end }}"{{ end }} preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
   {{- if $hasTitle -}}<title>{{ $title }}</title>{{- end -}}
